@@ -39,7 +39,7 @@ export default function Form() {
           <div className="flex flex-col gap-1">
             <label>Pergunta</label>
             <input
-              placeholder="Namora comigo?..."
+              placeholder="Yago lindo..."
               className="placeholder:text-red-300 border-2 border-gray-300 rounded-md px-4 py-1 w-96 bg-inherit"
               type="text"
               value={data.question}
@@ -50,7 +50,7 @@ export default function Form() {
           <div className="flex flex-col gap-1">
             <label>Mensagem</label>
             <input
-              placeholder="Eu te amo..."
+              placeholder="bla bla bla..."
               className="placeholder:text-red-300 border-2 border-gray-300 rounded-md px-4 py-1 w-96 bg-inherit"
               type="text"
               value={data.phrase}
