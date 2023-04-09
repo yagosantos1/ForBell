@@ -1,13 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import emoji from "./assets/emoji.png";
-import health from "./assets/health.png";
+import vini from "./assets/vni.png";
+import health from "./assets/real.png"; 
+
+
 
 export default function Main() {
   const { id } = useParams();
 
   const [phrase, setPhrase] = useState("");
-  const [question, setQuestion] = useState("");
+  const [question, setQuestion] = useState(""); 
+
+  
+
 
   useEffect(() => {
     if (id) {
@@ -21,10 +26,10 @@ export default function Main() {
   const noButton = useRef()
   const [currentAnswer, setCurrentAnswer] = useState(0);
   const answers = [
-    "Você está disposta a responder algumas perguntas?",
+    "Leticia esta disposta a responder algumas perguntas?",
     "Você responderá com total sinceridade?",
     "Tem certeza de que deseja continuar?",
-    !question ? "Namora comigo? 💍" : question,
+    !question ? "Real madrid é melhor que barcelona?" : question,
   ]
 
   const handleYesAnswerButton = () => {
@@ -43,7 +48,7 @@ export default function Main() {
 
   return (
     <div className="flex flex-col w-full min-h-screen items-center pt-14">
-      <img src={emoji} alt="" width={200} />
+      <img src={vini} alt="" width={200} />
 
       <div className="flex flex-col mt-10 min-w-full items-center">
         <p className="text-sms font-semibold break-words" align="center">{answers[currentAnswer]}</p>
@@ -73,14 +78,14 @@ export default function Main() {
               {!id ? (
                 <>
                   <p className="font-semibold" align="center">"
-                    <b>Meu amor por você é igual um círculo, 360º"</b> - Danilo
+                    <b>halla madrid para sempre</b> - Yago
                   </p>
 
-                  <p align="center">Te amo Bel, minha princesinha gatinha</p>
+                  <p align="center">hala madrid</p>
 
                   <img src={health} alt="" width={200} />
 
-                  <p className="mt-10">Made with 🤍 by <a className="font-semibold text-red-300" href="https://www.instagram.com/danilo.samw/">@danilo.samw</a></p>
+                  <p className="mt-10">Yago gostoso <a className="font-semibold text-red-300" href="https://www.instagram.com/yagobeckmaan/">@yagobeckmaan</a></p>
                 </>
               ) : (
                 <>
@@ -89,7 +94,7 @@ export default function Main() {
                   </p>
                   <img src={health} alt="" width={200} />
 
-                  <p className="mt-10">Made with 🤍 by <a className="font-semibold text-red-300" href="https://www.instagram.com/danilo.samw/">@danilo.samw</a></p>
+                  <p className="mt-10">Yago <a className="font-semibold text-red-300" href="https://www.instagram.com/yagobeckmaan/">@yagobeckmaan</a></p>
                 </>
               )}
             </div>
